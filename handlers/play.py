@@ -34,13 +34,13 @@ async def play(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await message.reply_text(f"**{bn} :-** قم بالرد على الاغنيه او الرابط اولا ♻️")
+        return await message.reply_text(f"**{bn} :-** تکایە لە ڕێپڵەی گۆرانی یان لینک بنوسە ♻️")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{bn} :-** تم اضافه الاغنيه الى الدور #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} 🎶")
+        await message.reply_text(f"**{bn} :-** گۆرانیە زیادکرا بۆ ڕێزی دواتر بۆ پەخشکردن #{await callsmusic.queues.put(message.chat.id, file_path=file_path)} 🎶")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
-        await message.reply_text(f"**{bn} :-** تم تشغيل الاغنيه.. 🎶")
+        await message.reply_text(f"**{bn} :-** گۆرانیە پەخشکرا.. 🎶")
 @Client.on_message(command("vol"))
 async def volume_bot(_, message):
     usage = "**Usage:**\n/volume [1-200]"
