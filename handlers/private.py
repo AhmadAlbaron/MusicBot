@@ -74,7 +74,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🔊 کەناڵی پەرەپێدەر", url="https://t.me/xawnakam_lm")
+                        "🔊 کەناڵی پەرەپێدەر", url="https://t.me/Music_Hama")
                 ],[
                     InlineKeyboardButton(
                         "🎶 ئەژمێری یاریدەر", url="https://t.me/MUSIC_VOICEY"
