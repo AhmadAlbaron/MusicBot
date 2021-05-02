@@ -21,14 +21,14 @@ async def start(_, message: Message):
                         "🛠 ئەژمێری پەرەپێدەر 🛠", url="https://t.me/hhmhhh")
                   ],[
                     InlineKeyboardButton(
-                        "💬 کەناڵی ڕوونکردنەوەکانی پەرەپێدەر", url="https://t.me/in_arrray"
+                        "💬 خاوەنی بۆتەکە", url="https://t.me/hama_refaat2"
                     ),
                     InlineKeyboardButton(
-                        "🔊 کەناڵەکەم", url="https://t.me/CQCQQ"
+                        "🔊 کەناڵەکەم", url="https://t.me/xawnakam_lm"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "➕زیادم بکە بۆ کۆکراوەکەت ➕", url="https://t.me/MusiVchatBot?startgroup=true"
+                        "➕زیادم بکە بۆ کۆکراوەکەت ➕", url="https://t.me/Music_HamaBot?startgroup=true"
                     )]
             ]
         ),
