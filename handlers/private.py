@@ -18,13 +18,13 @@ async def start(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🛠 یارمەتی دان 🛠", url="https://t.me/hhmhhh")
+                        "🛠 ئەژمێری پەرەپێدەر 🛠", url="https://t.me/hhmhhh")
                   ],[
                     InlineKeyboardButton(
                         "💬 کەناڵی ڕوونکردنەوەکانی پەرەپێدەر", url="https://t.me/in_arrray"
                     ),
                     InlineKeyboardButton(
-                        "🔊 کەناڵی پەرەپێدەر", url="https://t.me/CQCQQ"
+                        "🔊 کەناڵەکەم", url="https://t.me/CQCQQ"
                     )
                 ],[ 
                     InlineKeyboardButton(
@@ -42,7 +42,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🔊 کەناڵی تایبەت بە خۆم", url="https://t.me/")
+                        "🔊 کەناڵەکەم", url="https://t.me/xawnakam_lm")
                 ]
             ]
         )
@@ -74,7 +74,7 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🔊 کەناڵی پەرەپێدەر", url="https://t.me/z44z4")
+                        "🔊 کەناڵی پەرەپێدەر", url="https://t.me/xawnakam_lm")
                 ],[
                     InlineKeyboardButton(
                         "🎶 ئەژمێری یاریدەر", url="https://t.me/MUSIC_VOICEY"
