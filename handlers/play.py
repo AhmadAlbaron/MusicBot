@@ -23,7 +23,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 100) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"**{bn} :-**  يجب ان يكون حجم مقطع الصوت  {DURATION_LIMIT} minute(s) لايمكن تحميل \n المقطع هذا لان حجمه {audio.duration / 100} minute(s)"
+                f"**{bn} :-**  ببوورە قەبارەی زۆرە  {DURATION_LIMIT} minute(s) ناتوانم دابگرم \n نابێ لە زیاتر بێ {audio.duration / 100} minute(s)"
             )
 
         file_name = get_file_name(audio)
