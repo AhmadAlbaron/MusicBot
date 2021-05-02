@@ -43,7 +43,7 @@ async def play(_, message: Message):
         await message.reply_text(f"**{bn} :-** گۆرانیە پەخشکرا.. 🎶")
 @Client.on_message(command("vol"))
 async def volume_bot(_, message):
-    usage = "**Usage:**\n/volume [1-200]"
+    usage = "**شتەکە ئەوەیە:**\n/vol [1-200]"
     if len(message.command) != 2:
         await message.reply_text(usage)
         return
