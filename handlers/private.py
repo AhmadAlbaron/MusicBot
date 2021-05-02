@@ -8,28 +8,27 @@ from helpers.filters import other_filters2
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
       await message.reply_text(
-        f"""**مرحبا انا **{bn}** 🎵
+        f"""**سڵاوو من **{bn}** 🎵
 
-بامكاني تشغيل الاغاني في المكالمات الجماعيه 
-قم برفعي  مشرف في قناتك مع البوت المساعد [𝗠𝗨𝗦𝗜𝗖 𝗦𝗧𝗢𝗥𝗠](https://t.me/MUSIC_VOICEY).
+من بۆتی پەخشکردنی گۆرانیم لە چاتە دەنگیەکانی گرووپەکان زیادم بکە و بمکە بەڕێوەبەر  بە یارمەتی  [{bn}](https://t.me/Music_HamaBot).
 
-قم باضافتي الى مجموعتك لتبدأ الحفله 🎶**
+لەسەر زیادکردنی گرووپ لێدە 🎶**
         """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🛠 لطلب المساعده 🛠", url="https://t.me/hhmhhh")
+                        "🛠 یارمەتی دان 🛠", url="https://t.me/hhmhhh")
                   ],[
                     InlineKeyboardButton(
-                        "💬 قناة للشروحات", url="https://t.me/in_arrray"
+                        "💬 کەناڵی ڕوونکردنەوەکانی پەرەپێدەر", url="https://t.me/in_arrray"
                     ),
                     InlineKeyboardButton(
-                        "🔊 قناتي", url="https://t.me/CQCQQ"
+                        "🔊 کەناڵی پەرەپێدەر", url="https://t.me/CQCQQ"
                     )
                 ],[ 
                     InlineKeyboardButton(
-                        "➕  اضفني الى مجموعتك ➕", url="https://t.me/MusiVchatBot?startgroup=true"
+                        "➕زیادم بکە بۆ کۆکراوەکەت ➕", url="https://t.me/MusiVchatBot?startgroup=true"
                     )]
             ]
         ),
@@ -38,12 +37,12 @@ async def start(_, message: Message):
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""** تم تفعيل البوت بنجاح ✅**""",
+      await message.reply_text("""** بۆتەکە بە سەرکەوتوویی چالاک کرا. ✅**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🔊 قناتي الخاصه", url="https://t.me/z44z4")
+                        "🔊 کەناڵی تایبەت بە خۆم", url="https://t.me/")
                 ]
             ]
         )
@@ -52,30 +51,33 @@ async def gstart(_, message: Message):
 
 @Client.on_message(filters.command("panel") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""** يمتاز هذا البوت بالبحث والتحميل ✨
-اكتب معرف البوت مع اسم الاغنيه للبحث 🔊
-مثال : 
-@MusiVchatBot كاظم الساهر
-تستطيع تحميل اي اغنيه ايضا 💞
-بالاوامر التاليه :
-- /ytp رابط الاغنيه من اليوتيوب
-- /song رابط الاغنيه من اليوتيوب
+      await message.reply_text("""** ئەم بۆتە بەدوادا گەڕان و داگرتن  دەکاتنـ و گۆرانی لەڤۆیس چات لێ ئەداتن✨
+ناسنامەی بۆت بنووسە بە ناوی گۆرانییەکە بۆ گەڕان 🔊
+نموونە: 
+@Music_HamaBot ئاوات بۆکانی
 
-للتحكم بالاغنية داخل المكالمه الجماعيه 🔊
-- /play بالرد على الاغنيه او الرابط للتشغيل
-- /pause لايقاف الاغنيه موقتا داخل المكالمه
-- /resume لتكمله الاغنيه المتوقفه
-- /stop لايقاف البوت عن تشغيل الاغنيه
-- /skip لتخطي الاغنيه الحاليه والانتقال الى الاغنيه التاليه
-#ملاحظه : تستطيع ان تقوم بتشغيل اغنيه اخرى فتضاف الى الدور بعد الاغنيه الحاليه فتتنقل بينها وبين الاغاني الباقيه باستخدام امر /skip 🔖 **""",
+هەروەها دەتوانیت هەر گۆرانییەک دابەزێنیت💞
+بەم فەرمانانەی خوارەوە:
+- /ytp لینک گۆرانی لە یوتوب
+- /song لینکی گۆرانی لە یوتوب
+
+بۆ کۆنترۆڵکردنی گۆرانی ناو ڤۆیس چاتەکە بە پەیوەندی 🔊
+
+- /play بە وەڵامدانەوەی گۆرانیەکە یان لینکی ڤیدیۆی یووتووب بۆ پەخشکردن
+- /stop بۆ وەستانی گۆرانیەکە بە شێوەیەکی کاتی لە ناو پەیوەندیەکە
+- /resume بۆ تەواوکردنی گۆرانییە ڕاگیراوەکە
+- /stop بۆ ئەوەی بۆتەکە لە ژەنینی گۆرانیەکە بوەستێ
+-/skip بۆ بازدان لە گۆرانی ئێستا و بڕوا بۆ گۆرانی داهاتوو
+
+#تێبینی : دەتوانیت گۆرانییەکی تر ببەی و زیاد بکەیت بۆ ڕۆڵەکەی دوای گۆرانیەکەی ئێستا بۆیە دەجولێیت لەنێوانی و باقی گۆرانیەکان بە بەکارهێنانی ڕیز /skip 🔖**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🔊 قناتي الخاصه", url="https://t.me/z44z4")
+                        "🔊 کەناڵی پەرەپێدەر", url="https://t.me/z44z4")
                 ],[
                     InlineKeyboardButton(
-                        "🎶 الحساب المساعد", url="https://t.me/MUSIC_VOICEY"
+                        "🎶 ئەژمێری یاریدەر", url="https://t.me/MUSIC_VOICEY"
                     )
                 ]
             ]
