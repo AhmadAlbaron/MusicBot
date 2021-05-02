@@ -19,10 +19,10 @@ async def pause(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
     ):
-        await message.reply_text(f"**{BN} :-**لا توجد اغنية قيد التشغيل لايقافها 🎶")
+        await message.reply_text(f"**{BN} :-** هیچ گۆرانیەک پەخشنەکراوە تاکوو ڕابگریت 🎶")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text(f"**{BN} :-** تم ايقاف الاغنيه ✅")
+        await message.reply_text(f"**{BN} :-** گۆرانیە ڕاگیرا ✅")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -34,10 +34,10 @@ async def resume(_, message: Message):
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
     ):
-        await message.reply_text(f"**{BN} :-** لا توجد اغنيه قيد الايقاف لتشغيلها 🎶")
+        await message.reply_text(f"**{BN} :-** ببوورە هیچ گۆرانیەک ڕانەگیراوە تاکوو دەست پێ بکاتەوە 🎶")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text(f"**{BN} :-** تم استئناف التشغيل 🎶")
+        await message.reply_text(f"**{BN} :-** گۆرانیەی ڕاگیرابوو پەخشکراوە 🎶")
 
 
 @Client.on_message(command("stop") & other_filters)
@@ -45,7 +45,7 @@ async def resume(_, message: Message):
 @authorized_users_only
 async def stop(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{BN} :-** لاتوجد اغنيه قيد التشغيل لايقافها ❌")
+        await message.reply_text(f"**{BN} :-** هیچ گۆرانیەک پەخشنەکراوە تاکوو ڕابگریت ❌")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
@@ -53,7 +53,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text(f"**{BN} :-** تم ايقاف الاغنيه ✅")
+        await message.reply_text(f"**{BN} :-** پەخشکردن وەستا ✅")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -61,7 +61,7 @@ async def stop(_, message: Message):
 @authorized_users_only
 async def skip(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text(f"**{BN} :-** لا توجد اغنيه قيد التشغيل لتخطيها ❌")
+        await message.reply_text(f"**{BN} :-** هیچ گۆرانیەک پەخشنەکراوە تاکوو ڕابگریت ❌")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
@@ -73,6 +73,6 @@ async def skip(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file_path"]
             )
 
-        await message.reply_text(f"**{BN} :-** تم تخطي الاغنيه الحاليه وتشغيل الاغنيه التاليه 🎶")
+        await message.reply_text(f"**{BN} :-** گۆرانی پەخشکراوو تێپەڕێندرا بۆ گۆرانی دواتر 🎶")
 
 
